@@ -1,15 +1,14 @@
 # Microservice-for-MusicBrainz-API-NODEJS
 
-## Tech stack
-
-- [Node.js](https://nodejs.org/en/)
--
-
 ## Getting started
 
 - `npm install`
 - `nodemon api`
 - open up localhost:3002 to view the API
+
+## Tech stack
+
+- [Node.js](https://nodejs.org/en/)
 
 ## The exercise
 
