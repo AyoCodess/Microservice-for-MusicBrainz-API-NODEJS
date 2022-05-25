@@ -21,7 +21,7 @@ app.get(`/`, (req, res) => {
   <h2>Test Endpoints:</h2>
   <h3>Coldplay:</h3>
   <ul>
-  <li><b>Id: </b> cc197bad-dc9c-440d-a5b5-d52ba2e14234'</li>
+  <li><b>Id: </b> cc197bad-dc9c-440d-a5b5-d52ba2e14234</li>
   </ul>
   <h3>Snoopdogg:</h3>
   <ul>
