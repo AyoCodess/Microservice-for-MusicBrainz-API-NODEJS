@@ -13,8 +13,10 @@ app.get(`/`, (req, res) => {
   <div style='padding: 2rem;'>
   <h1>Musicbrainz Service API</h1>
   <p>This API consumes and re-organizes data from the Musicbrainz API for ease of use in your application.</p>
-  <p><h3 style='display:inline-block;'>Original Api Documentation:</h3>  <a href="https://musicbrainz.org/doc/MusicBrainz_API" target="_blank" rel="noopener">Musicbrainz API</a> </p>
-  <p><h3 style='display: inline-block;'>How to use:</h3> Copy and paste the test endpoints at the end of the url | i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 | use any artist Id from the MusicBrainz API</p>
+  <h3 style='display:inline-block;'>Original Api Documentation:</h3>  
+  <a href="https://musicbrainz.org/doc/MusicBrainz_API" target="_blank" rel="noopener">Musicbrainz API</a>
+  <h4>How to use</h4> 
+  <p>Copy and paste the test endpoints at the end of the url | i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 | use any artist Id from the MusicBrainz API</p>
   <hr '/>
   <h2>Test Endpoints:</h2>
   <h3>Coldplay:</h3>
