@@ -4,7 +4,7 @@
 
 - `npm install`
 - `nodemon api`
-- open up localhost:3002 to view the API
+- open up localhost:3003 to view the API
 
 ## Tech stack
 
