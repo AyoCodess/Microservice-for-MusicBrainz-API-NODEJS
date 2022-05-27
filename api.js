@@ -3,7 +3,7 @@ import axios from 'axios';
 import cors from 'cors';
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3003;
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
@@ -57,8 +57,10 @@ app.get(`/:artistId`, async (req, res) => {
       city: data.data.begin_area.name,
       start: data.data['life-span'].begin,
       end: data.data['life-span'].end,
-      isActive: data.data['life-span'].ended,
+      isActive: data.data['life-span'].ended ? false : true,
     };
+
+    console.log(data.data);
 
     JSON.stringify(artistInfo);
 
