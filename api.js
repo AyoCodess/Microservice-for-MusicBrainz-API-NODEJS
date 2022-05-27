@@ -60,8 +60,6 @@ app.get(`/:artistId`, async (req, res) => {
       isActive: data.data['life-span'].ended ? false : true,
     };
 
-    console.log(data.data);
-
     JSON.stringify(artistInfo);
 
     res.setHeader('Content-Type', 'application/json');
