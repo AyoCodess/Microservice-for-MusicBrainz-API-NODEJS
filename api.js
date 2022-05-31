@@ -4,8 +4,6 @@ import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3003;
-app.use(cors());
-app.use(express.urlencoded({ extended: false }));
 
 // - landing page
 app.get(`/`, (req, res) => {
@@ -46,23 +44,23 @@ app.get(`/:artistId`, async (req, res) => {
   const { artistId } = req.params;
 
   try {
-    const data = await axios(`https://musicbrainz.org/ws/2/artist/${artistId}`);
+    const response = await axios(
+      `https://musicbrainz.org/ws/2/artist/${artistId}`
+    );
 
     // - transforming the consumed data into a better structure
     const artistInfo = {
-      type: data.data.type,
-      name: data.data.name,
-      countryAbbr: data.data.country,
-      country: data.data.area.name,
-      city: data.data.begin_area.name,
-      start: data.data['life-span'].begin,
-      end: data.data['life-span'].end,
-      isActive: data.data['life-span'].ended ? false : true,
+      type: response.data.type,
+      name: response.data.name,
+      countryAbbr: response.data.country,
+      country: response.data.area.name,
+      city: response.data.begin_area.name,
+      start: response.data['life-span'].begin,
+      end: response.data['life-span'].end,
+      isActive: response.data['life-span'].ended ? false : true,
     };
 
     JSON.stringify(artistInfo);
-
-    res.setHeader('Content-Type', 'application/json');
     res.send(artistInfo);
   } catch (err) {
     console.log(err);
