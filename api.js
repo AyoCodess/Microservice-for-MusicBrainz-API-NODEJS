@@ -1,6 +1,5 @@
 import express from 'express';
 import axios from 'axios';
-import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3003;
@@ -41,13 +40,19 @@ app.get(`/`, (req, res) => {
 
 // - get any artist data via their id
 app.get(`/:artistId`, async (req, res) => {
-  console.log(req.params);
   const { artistId } = req.params;
 
   try {
     const response = await axios(
       `https://musicbrainz.org/ws/2/artist/${artistId}`
     );
+
+    if (!response) {
+      res.status(500).json({
+        status: 'failed',
+        message: 'No data, please contact the developer for assistance',
+      });
+    }
 
     // - transforming the consumed data into a better structure
     const artistInfo = {
@@ -69,6 +74,13 @@ app.get(`/:artistId`, async (req, res) => {
       message: 'We couldn’t find an artist with this id',
     });
   }
+});
+
+app.get('*', function (req, res) {
+  res.status(404).json({
+    status: 'failed',
+    message: 'Route does not exist',
+  });
 });
 
 app.listen(port, () => {
