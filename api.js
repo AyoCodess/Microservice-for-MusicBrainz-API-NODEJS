@@ -41,6 +41,7 @@ app.get(`/`, (req, res) => {
 
 // - get any artist data via their id
 app.get(`/:artistId`, async (req, res) => {
+  console.log(req.params);
   const { artistId } = req.params;
 
   try {
@@ -60,8 +61,8 @@ app.get(`/:artistId`, async (req, res) => {
       isActive: response.data['life-span'].ended ? false : true,
     };
 
-    JSON.stringify(artistInfo);
-    res.send(artistInfo);
+    res.json(artistInfo);
+    console.log(req.route);
   } catch (err) {
     console.log(err);
     res.status(404).json({
