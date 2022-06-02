@@ -76,7 +76,7 @@ app.get(`/:artistId`, async (req, res) => {
   }
 });
 
-app.get('*', function (req, res) {
+app.get('*', (req, res) => {
   res.status(404).json({
     status: 'failed',
     message: 'Route does not exist',
