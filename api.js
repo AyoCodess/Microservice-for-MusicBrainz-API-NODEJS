@@ -21,7 +21,7 @@ app.get(`/`, (req, res) => {
   <ul>
   <li><b>Id: </b> cc197bad-dc9c-440d-a5b5-d52ba2e14234</li>
   </ul>
-  <h3>Snoopdogg:</h3>
+  <h3>SnoopDogg:</h3>
   <ul>
   <li><b>Id: </b>f90e8b26-9e52-4669-a5c9-e28529c47894</li>
 
@@ -62,7 +62,6 @@ app.get(`/:artistId`, async (req, res) => {
     };
 
     res.json(artistInfo);
-    console.log(req.route);
   } catch (err) {
     console.log(err);
     res.status(404).json({
