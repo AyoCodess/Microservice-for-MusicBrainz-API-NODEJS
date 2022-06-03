@@ -4,9 +4,27 @@ import axios from 'axios';
 const app = express();
 const port = process.env.PORT || 3003;
 
-// - landing page
+// - landing page + meta data
 app.get(`/`, (req, res) => {
   res.send(`
+  <meta property="og:title" content="Musicbrainz Microservice API"/>
+    <meta property="og:description" content="Get re-organised artist info via the ID" />
+    <meta name="description" content="Get re-organised artist info via the ID" >
+    <meta property="og:image" content="https://i.imgur.com/tOo7SgK.png" />
+    <meta property="og:url" content="https://www.ayoadesanya.com" />
+    <meta property="og:site_name" content="Musicbrainz Microservice API" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:image" content="https://i.imgur.com/tOo7SgK.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Musicbrainz Microservice API" />
+    <meta
+      name="twitter:description"
+      content="Get re-organised artist info via the ID"
+    />
+    <meta name="twitter:site" content="@ayo__codes" />
+    <meta name="twitter:creator" content="@ayo__codes" />
+
   <div style='padding: 2rem;'>
   <h1>Musicbrainz Service API</h1>
   <p>This API consumes and re-organizes data from the Musicbrainz API for ease of use in your application.</p>
