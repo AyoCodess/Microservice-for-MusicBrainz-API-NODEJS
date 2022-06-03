@@ -7,7 +7,8 @@ const port = process.env.PORT || 3003;
 // - landing page + meta data
 app.get(`/`, (req, res) => {
   res.send(`
-  <meta property="og:title" content="Musicbrainz Microservice API"/>
+  <head> 
+    <meta property="og:title" content="Musicbrainz Microservice API"/>
     <meta property="og:description" content="Get re-organised artist info via the ID" />
     <meta name="description" content="Get re-organised artist info via the ID" >
     <meta property="og:image" content="https://i.imgur.com/tOo7SgK.png" />
@@ -24,7 +25,8 @@ app.get(`/`, (req, res) => {
     />
     <meta name="twitter:site" content="@ayo__codes" />
     <meta name="twitter:creator" content="@ayo__codes" />
-
+  </head>
+ 
   <div style='padding: 2rem;'>
   <h1>Musicbrainz Service API</h1>
   <p>This API consumes and re-organizes data from the Musicbrainz API for ease of use in your application.</p>
