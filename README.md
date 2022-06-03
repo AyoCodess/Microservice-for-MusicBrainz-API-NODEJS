@@ -8,7 +8,8 @@
 
 ## Tech stack
 
-- [Node.js](https://nodejs.org/en/)
+- Node.js - Backend framework
+- Axios - Data fetching
 
 ## The Task
 
