@@ -7,7 +7,12 @@ const port = process.env.PORT || 3003;
 // - landing page + meta data
 app.get(`/`, (req, res) => {
   res.send(`
+  <!DOCTYPE html>
+  <html lang="en">
   <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Musicbrainz Microservice API"/>
     <meta property="og:description" content="Get re-organised artist info via the ID" />
     <meta name="description" content="Get re-organised artist info via the ID" >
@@ -26,36 +31,40 @@ app.get(`/`, (req, res) => {
     <meta name="twitter:site" content="@ayo__codes" />
     <meta name="twitter:creator" content="@ayo__codes" />
   </head>
- 
-  <div style='padding: 2rem;'>
-  <h1>Musicbrainz Service API</h1>
-  <p>This API consumes and re-organizes data from the Musicbrainz API for ease of use in your application.</p>
-  <h3 style='display:inline-block;'>Original Api Documentation:</h3>  
-  <a href="https://musicbrainz.org/doc/MusicBrainz_API" target="_blank" rel="noopener">Musicbrainz API</a>
-  <h4>How to use</h4> 
-  <p>Copy and paste the test endpoints at the end of the url | i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 | use any artist Id from the MusicBrainz API</p>
-  <hr />
-  <h2>Test Endpoints:</h2>
-  <h3>Coldplay:</h3>
-  <ul>
-  <li><b>Id: </b> cc197bad-dc9c-440d-a5b5-d52ba2e14234</li>
-  </ul>
-  <h3>SnoopDogg:</h3>
-  <ul>
-  <li><b>Id: </b>f90e8b26-9e52-4669-a5c9-e28529c47894</li>
+  <body> 
 
-  </ul>
-  <h3>Pink Floyd</h3>
-  <ul>
-  <li><b>Id: </b>83d91898-7763-47d7-b03b-b92132375c47</li>
+    <div style='padding: 2rem;'>
+    <h1>Musicbrainz Service API</h1>
+    <p>This API consumes and re-organizes data from the Musicbrainz API for ease of use in your application.</p>
+    <h3 style='display:inline-block;'>Original Api Documentation:</h3>  
+    <a href="https://musicbrainz.org/doc/MusicBrainz_API" target="_blank" rel="noopener">Musicbrainz API</a>
+    <h4>How to use</h4> 
+    <p>Copy and paste the test endpoints at the end of the url | i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 | use any artist Id from the MusicBrainz API</p>
 
-  </ul>
-  <hr />
-  <span>Created by:</span>
+    <hr />
+    <h2>Test Endpoints:</h2>
+    <h3>Coldplay:</h3>
+    <ul>
+    <li><b>Id: </b> cc197bad-dc9c-440d-a5b5-d52ba2e14234</li>
+    </ul>
+    <h3>SnoopDogg:</h3>
+    <ul>
+    <li><b>Id: </b>f90e8b26-9e52-4669-a5c9-e28529c47894</li>
 
-  <a href="https://www.ayoadesanya.com/" target="_blank" rel="noopener">Ayo Adesanya</a>
-  
-  </div>`);
+    </ul>
+    <h3>Pink Floyd</h3>
+    <ul>
+    <li><b>Id: </b>83d91898-7763-47d7-b03b-b92132375c47</li>
+
+    </ul>
+    <hr />
+    <span>Created by:</span>
+
+    <a href="https://www.ayoadesanya.com/" target="_blank" rel="noopener">Ayo Adesanya</a>
+    
+    </div>
+  </body>
+  </html>`);
 });
 
 // - get any artist data via their id
