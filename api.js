@@ -39,7 +39,7 @@ app.get(`/`, (req, res) => {
     <h3 style='display:inline-block;'>Original Api Documentation:</h3>  
     <a href="https://musicbrainz.org/doc/MusicBrainz_API" target="_blank" rel="noopener">Musicbrainz API</a>
     <h4>How to use</h4> 
-    <p>Copy and paste the test endpoints at the end of the url | i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 | use any artist Id from the MusicBrainz API</p>
+    <p>Copy and paste the test endpoints at the end of the url - i.e /cc197bad-dc9c-440d-a5b5-d52ba2e14234 - use any artist Id from the MusicBrainz API</p>
 
     <hr />
     <h2>Test Endpoints:</h2>
